@@ -294,6 +294,144 @@ footer {
     background-color: transparent;
 }
 
+/* Gallery Grid */
+.portfolio_filter_wrapper {
+    display: grid !important;
+    grid-template-columns: repeat(5, 1fr) !important;
+    gap: 15px !important;
+    padding: 0 30px 50px !important;
+    width: auto !important;
+    height: auto !important;
+    position: relative !important;
+}
+
+.portfolio_filter_wrapper .element {
+    position: relative !important;
+    top: auto !important;
+    left: auto !important;
+    width: 100% !important;
+    margin: 0 !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+    transform: none !important;
+    overflow: hidden !important;
+}
+
+.portfolio_filter_wrapper .one_fifth,
+.portfolio_filter_wrapper .fancy-gallery {
+    display: block !important;
+    width: 100% !important;
+    height: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+.portfolio_filter_wrapper .element img.preview {
+    width: 100% !important;
+    height: auto !important;
+    aspect-ratio: 1/1 !important;
+    object-fit: cover !important;
+    display: block !important;
+    transition: transform 0.5s ease, opacity 0.3s ease !important;
+    cursor: pointer !important;
+}
+
+.portfolio_filter_wrapper .element:hover img.preview {
+    transform: scale(1.05);
+    opacity: 0.85;
+}
+
+.portfolio_filter_wrapper .element .one_fifth {
+    width: 100%;
+    float: none;
+}
+
+.portfolio_filter_wrapper .infinite_loading {
+    display: none;
+}
+
+/* Lightbox */
+.lightbox-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.92);
+    z-index: 10000;
+    justify-content: center;
+    align-items: center;
+    cursor: zoom-out;
+}
+
+.lightbox-overlay.active {
+    display: flex;
+}
+
+.lightbox-overlay img {
+    max-width: 90vw;
+    max-height: 90vh;
+    object-fit: contain;
+    border-radius: 2px;
+    box-shadow: 0 5px 40px rgba(0,0,0,0.5);
+}
+
+.lightbox-close {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    color: #fff;
+    font-size: 36px;
+    cursor: pointer;
+    font-weight: 300;
+    line-height: 1;
+    z-index: 10001;
+    transition: opacity 0.3s;
+}
+
+.lightbox-close:hover {
+    opacity: 0.7;
+}
+
+.lightbox-nav {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #fff;
+    font-size: 48px;
+    cursor: pointer;
+    padding: 20px;
+    font-weight: 300;
+    user-select: none;
+    transition: opacity 0.3s;
+    z-index: 10001;
+}
+
+.lightbox-nav:hover {
+    opacity: 0.7;
+}
+
+.lightbox-prev {
+    left: 20px;
+}
+
+.lightbox-next {
+    right: 20px;
+}
+
+@media (max-width: 1024px) {
+    .portfolio_filter_wrapper {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .portfolio_filter_wrapper {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
 /* Responsive */
 @media (max-width: 768px) {
     .main-nav {
