@@ -314,16 +314,21 @@ footer {
     opacity: 1 !important;
     visibility: visible !important;
     transform: none !important;
-    overflow: hidden !important;
+    overflow: visible !important;
+    display: block !important;
 }
 
 .portfolio_filter_wrapper .one_fifth,
+.portfolio_filter_wrapper .gallery_type,
 .portfolio_filter_wrapper .fancy-gallery {
     display: block !important;
     width: 100% !important;
     height: 100% !important;
     margin: 0 !important;
     padding: 0 !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+    transform: none !important;
 }
 
 .portfolio_filter_wrapper .element img.preview {
@@ -332,6 +337,8 @@ footer {
     aspect-ratio: 1/1 !important;
     object-fit: cover !important;
     display: block !important;
+    opacity: 1 !important;
+    visibility: visible !important;
     transition: transform 0.5s ease, opacity 0.3s ease !important;
     cursor: pointer !important;
 }
