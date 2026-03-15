@@ -174,20 +174,20 @@ nav a {
 
 /* Hero Section */
 .hero {
-    height: 100vh;
-    min-height: 600px;
+    height: 600px; /* Reduced height to match mockup */
+    min-height: 400px;
     background-image: url('img/main.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     display: flex;
     align-items: center;
-    justify-content: flex-start; /* Align content to the left */
+    justify-content: flex-start;
     position: relative;
     color: #ffffff;
-    text-align: left; /* Align text to the left */
+    text-align: left;
     overflow: hidden;
-    margin-top: -150px;
+    margin-top: 0; /* Remove negative margin to prevent overlap issues with new height */
 }
 
 /* Adjust if header is absolute/fixed */
