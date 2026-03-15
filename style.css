@@ -174,16 +174,28 @@ nav a {
 
 /* Hero Section */
 .hero {
-    height: 80vh;
-    min-height: 500px;
+    height: 100vh;
+    min-height: 600px;
+    background-image: url('img/main.jpg');
     background-size: cover;
     background-position: center;
+    background-repeat: no-repeat;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start; /* Align content to the left */
     position: relative;
     color: #ffffff;
-    text-align: center;
+    text-align: left; /* Align text to the left */
+    overflow: hidden;
+    margin-top: -150px;
+}
+
+/* Adjust if header is absolute/fixed */
+.home header.site-header {
+    background-color: rgba(255, 255, 255, 0.9);
+    position: absolute;
+    width: 100%;
+    z-index: 1000;
 }
 
 .hero::after {
@@ -193,27 +205,68 @@ nav a {
     left: 0;
     right: 0;
     bottom: 0;
-    background: rgba(0, 0, 0, 0.3);
+    background: rgba(0, 0, 0, 0.2); /* Slightly darker overlay for better text readability */
     z-index: 1;
 }
 
 .hero-content {
     position: relative;
     z-index: 2;
-    max-width: 800px;
-    padding: 0 20px;
+    max-width: 900px;
+    padding: 0 10%; /* Move text away from the very edge */
 }
 
-.hero h1 {
-    font-size: 3rem;
-    margin-bottom: 20px;
-    text-shadow: 1px 1px 4px rgba(0,0,0,0.5);
+.hero-title {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 100px; /* Larger as per mockup */
+    font-weight: 400;
+    letter-spacing: 2px; /* Less spacing than before */
+    color: #ffffff; /* Force white color */
+    text-transform: none; /* Not uppercase as per mockup */
+    margin-bottom: 0px;
+    opacity: 0;
+    transform: translateY(30px);
+    animation: fadeInUp 1.2s cubic-bezier(0.2, 0.8, 0.2, 1) forwards;
+    animation-delay: 0.3s;
 }
 
-.hero p {
-    font-size: 1.2rem;
-    margin-bottom: 30px;
-    font-family: var(--font-heading);
+.hero-subtitle {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 40px; /* Larger than before */
+    font-weight: 300;
+    letter-spacing: 1px;
+    text-transform: none; /* Not uppercase */
+    color: rgba(255, 255, 255, 0.9);
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 1.2s cubic-bezier(0.2, 0.8, 0.2, 1) forwards;
+    animation-delay: 0.8s;
+}
+
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive adjustment for Hero */
+@media (max-width: 768px) {
+    .hero {
+        height: 70vh;
+        margin-top: 0;
+    }
+    .hero-title {
+        font-size: 40px;
+        letter-spacing: 8px;
+    }
+    .hero-subtitle {
+        font-size: 10px;
+        letter-spacing: 3px;
+    }
+    .home header.site-header {
+        position: relative;
+    }
 }
 
 /* Footer */
