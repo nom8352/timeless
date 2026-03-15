@@ -1,24 +1,29 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-US">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Meta title and description based on original site, localized to Brisbane -->
-    <title>Home - Timeless Wedding & Event Photography Brisbane</title>
-    <meta name="description" content="Timeless Photography is a Brisbane based professional photography studio specializing in Newborn, Baby, and Family photography. Clicks, Down the Memory line.">
-    <link rel="icon" href="Assets/Icons/favicon-32x32-brisbane-photography.png" sizes="32x32">
-    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <title>Home - Timeless Photography Brisbane</title>
+    
+    <!-- Link Original Theme CSS per user instructions -->
+    <link rel="stylesheet" href="public_html/wp-content/themes/photography/css/reset.css" type="text/css" media="all" />
+    <link rel="stylesheet" href="public_html/wp-content/themes/photography/css/wordpress.css" type="text/css" media="all" />
+    <link rel="stylesheet" href="public_html/wp-content/themes/photography/css/screen.css" type="text/css" media="all" />
+    <link rel="stylesheet" href="public_html/wp-content/themes/photography/css/grid.css" type="text/css" media="all" />
+    
+    <!-- Link our custom style to handle header/footer -->
+    <link rel="stylesheet" href="style.css" type="text/css" media="all" />
 </head>
-<body>
-
-    <!-- Header -->
-    <header>
-        <div class="container nav-container">
-            <a href="index.html" class="logo">
-                <img src="Assets/Logos/logo-main-black-brisbane-photography.png" alt="Timeless Photography Brisbane Logo">
-            </a>
-            <div class="mobile-menu-btn">☰</div>
-            <nav>
+<body class="page-template-default page home">
+    
+    <header class="site-header">
+        <div class="header-inner">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="Assets/Logos/logo-main-black-brisbane-photography.png" alt="Timeless Photography Brisbane">
+                </a>
+            </div>
+            <nav class="main-nav">
                 <ul>
                     <li><a href="index.html">HOME</a></li>
                     <li><a href="about.html">ABOUT</a></li>
@@ -27,57 +32,154 @@
                     <li><a href="contact.html">CONTACT</a></li>
                 </ul>
             </nav>
+            <div class="mobile-menu-toggle">
+                <span></span><span></span><span></span>
+            </div>
         </div>
     </header>
 
-    <!-- Hero Section -->
-    <section class="hero" style="background-image: url('Assets/Images/Hero/hero-home-brisbane-photography.jpg');">
-        <div class="hero-content">
-            <h1>PROFESSIONAL PHOTOGRAPHY & BABY PHOTOGRAPHY BRISBANE</h1>
-            <p>Clicks, Down the Memory line</p>
-            <a href="services.html" class="btn">VIEW OUR SERVICES</a>
+    
+    <div id="wrapper">
+        <div id="page_content_wrapper">
+            <div  class="one fullwidth ">
+			<!-- START About Me Header REVOLUTION SLIDER 6.1.5 --><p class="rs-p-wp-fix"></p>
+			<rs-module-wrap id="rev_slider_1_1_wrapper" data-alias="about-me-header" data-source="gallery" style="background:transparent;padding:0;margin:0px auto;margin-top:0;margin-bottom:0;">
+				<rs-module id="rev_slider_1_1" style="display:none;" data-version="6.1.5">
+					<rs-slides>
+						<rs-slide data-key="rs-1" data-title="Slide" data-anim="ei:d;eo:d;s:d;r:0;t:notransition;sl:d;">
+							<img src="//www.timeless-photography.com.au/wp-content/uploads/2019/08/Amelia_0006_Web.jpg" title="Amelia_0006_Web" width="1685" height="1123" class="rev-slidebg" data-no-retina>
+<!--
+							--><rs-layer
+								id="slider-1-slide-1-layer-1" 
+								class="Fashion-BigDisplay"
+								data-type="text"
+								data-color="rgba(255,255,255,1)"
+								data-rsp_ch="on"
+								data-xy="x:r;xo:871px;y:c;yo:6px;"
+								data-text="w:normal;s:101;l:55;ls:2px;"
+								data-dim="w:517px;"
+								data-frame_0="y:-50px;tp:600;"
+								data-frame_1="tp:600;e:Power2.easeInOut;sp:1000;"
+								data-frame_999="y:top;tp:600;e:nothing;st:w;"
+								style="z-index:5;font-family:Montserrat;"
+							>The Smile 
+							</rs-layer><!--
+
+							--><rs-layer
+								id="slider-1-slide-1-layer-4" 
+								class="Fashion-BigDisplay"
+								data-type="text"
+								data-color="rgba(255,255,255,1)"
+								data-rsp_ch="on"
+								data-xy="x:r;xo:949px;y:c;yo:74px;"
+								data-text="w:normal;s:40;l:55;ls:2px;"
+								data-dim="w:348px;"
+								data-frame_0="y:50px;tp:600;"
+								data-frame_1="tp:600;e:Power2.easeInOut;st:500;sp:1000;"
+								data-frame_999="y:50px;o:0;tp:600;e:nothing;st:w;"
+								style="z-index:6;font-family:Montserrat;"
+							>You will miss 
+							</rs-layer><!--
+-->						</rs-slide>
+					</rs-slides>
+					<rs-progress class="rs-bottom" style="visibility: hidden !important;"></rs-progress>
+				</rs-module>
+				<script type="text/javascript">
+					setREVStartSize({c: 'rev_slider_1_1',rl:[1240,1024,778,480],el:[700],gw:[1400],gh:[700],layout:'fullwidth',mh:"0"});
+					var	revapi1,
+						tpj;
+					jQuery(function() {
+						tpj = jQuery;
+						if(tpj("#rev_slider_1_1").revolution == undefined){
+							revslider_showDoubleJqueryError("#rev_slider_1_1");
+						}else{
+							revapi1 = tpj("#rev_slider_1_1").show().revolution({
+								sliderType:"hero",
+								jsFileLocation:"//www.timeless-photography.com.au/wp-content/plugins/revslider/public/assets/js/",
+								sliderLayout:"fullwidth",
+								visibilityLevels:"1240,1024,778,480",
+								gridwidth:1400,
+								gridheight:700,
+								minHeight:"",
+								editorheight:"700,700,400,300",
+								responsiveLevels:"1240,1024,778,480",
+								disableProgressBar:"on",
+								navigation: {
+									onHoverStop:false
+								},
+								fallbacks: {
+									ignoreHeightChanges:"",
+									allowHTML5AutoPlayOnAndroid:true
+								},
+							});
+						}
+						
+					});
+				</script>
+			</rs-module-wrap>
+			<!-- END REVOLUTION SLIDER -->
+</div>
+<div  class="one" ><div class="page_content_wrapper nopadding"><div class="one_half_bg" style="background-image:url(public_html/wp-content/uploads/2020/02/001_ParisInMemories.jpg);height:795px;"></div><div class="one_half_bg" style="padding:60px;"><h2 class="ppb_title" style="">Clicks, Down the Memory line</h2><hr class="title_break left" style=""/></p>
+<div style="margin-top: 0px;">
+Photographs, you know what is best about it? They capture a moment that is gone and cannot be reproduced. It is said pictures speak a thousand words, a photograph is an asset, which records life events. They connect us to our past, to our family, friends and even the places. The happy or sad moments, the memory when it comes to your mind, photographs help you to relive the moment. We are the professional photo studio in Brisbane and will help you in your family photography.</p>
+<p>Photograph of a family is a memory of our life. From grandparents to parents, children to cousins, we want to remember everyone. We build a great bond, but as part of the experience, we depart. The photographs are going to help us in reliving the past and cherish the memories.</p>
+<p>Life is so fast. We are busy building our futures. When there is an addition to the family, we are thrilled. But as we are into our busy schedule, and at the blink of an eye, their tiny little feet walk towards you to wake you up early in the morning. We feel like it’s just an overnight and they start packing their bags. We at our studio in Brisbane will make a memory with your baby photography.</p>
+<p>May it be the engagement or marriage, may it be the baby shower or the tiny little first step, may it be a new pet welcome or the first day at school, to remember and relive these moments and all the milestones, photographs play a significant role.
+</p>
+</div>
+<div style="margin-top: 20px;"><a class="button ghost" href="https://sweetlifephotography.com.au/">Read More</a></div>
+<p>
+</div><br class="clear"/></div></div>
+<div  class="one" style="background-color:#222222;color:#ffffff;" ><div class="page_content_wrapper nopadding"><div class="one_half_bg textright" style="padding:60px;"><h2 class="ppb_title" style="color:#ffffff;">DOCUMENT THE GROWTH</h2><hr class="title_break left" style="border-color:#ffffff;"/></p>
+<div style="margin-top:0px">
+It’s a great way to document their growth with pictures and portraits, from a toddler to a first day of the school. When a family is together, don’t forget to take family pictures. It is a sweet reminder of the time spend together. As life is uncertain, there is no reason to squander the opportunity to capture the moments together.</p>
+<p>Pictures bring us back to our legacy, and they are a great way to ponder the memories. You can’t go back in the past and bring back the family, but pictures do. You may not be together now, but the smiles and the laughter in pics will fill your heart.</p>
+<p>And when it comes to newborn photography, it’s a treasure one is going to enjoy throughout the life. The newlyweds, first time going to be parents, are going through life experience. The early pregnancy goes through a lot of first-time changes — these beautiful moments, the growing bulge of a mother’s womb, what a delightful sight. </p>
+<p>The newborn is delicate and is a lifetime event. And if it is for the first time, then this is a moment not to miss. From the womb to the outside world, each moment to cherish, and should be captured. It will be a surprising treat for the kid when he grows up. With our professionals in-studio at Brisbane, we will arrange everything from costumes to different backgrounds for the newborn photography event.
+</p>
+</div>
+<div style="margin-top:30px">
+<a href="https://www.timeless-photography.com.au/gallery-timeless-photography/" class="button ghost white">View Gallery</a>
+</div>
+<p>
+</div><div class="one_half_bg" style="background-image:url(public_html/wp-content/uploads/2020/02/sleeping-baby.jpg);height:805px;"></div><br class="clear"/></div></div>
+<div  class="one withsmallpadding ppb_header " style="padding-bottom:0 !important;text-align:center;padding:50px 0 50px 0;" ><div class="standard_wrapper"><div class="page_content_wrapper"><div class="inner"><div style="margin:auto;width:50%"><h2 class="ppb_title" style="">It is a sprouting service and gaining popularity. </h2><hr class="title_break center" style=""/><div class="ppb_header_content"><p>Maternity photography is a treasure for first-time parents. Maternity photography is a distressing activity for the young couple who are now getting prepared for the new commitment.</p>
+<p> No one is going to be there always. One day, only pictures will be there. Make sure you are there. These are the memories for others. Let them cherish the memories of them. You don’t take a photograph, and you make it. It is the memory of what you wanted to say, in your eyes. Photographs store emotions and feelings in them.</p>
+<p><img src="public_html/wp-content/uploads/2015/09/signature.png" alt="" /></p>
+</div></div></div></div></div></div>
+<div class="standard_wrapper"><div  class="one_third withsmallpadding ppb_text" style="padding:50px 0 50px 0;" ><div class="standard_wrapper"><div class="page_content_wrapper"><div class="inner"><div style="margin:auto;width:100%"><p><img src="public_html/wp-content/uploads/2020/02/sleeping-baby-in-a-basket.jpg" alt="sleeping baby on a basket" /></p>
+<h5>Newborn photography is an art</h5>
+<p>It is with your young baby who do not understand instructions. The baby cannot artificially give the best poses or facial expressions. The photography experts have to wait for the best moments to capture. The family photography with a range of costumes and props present in the Brisbane studio is a session full of love and happiness. What all you have to bring to the studio is happiness and of course your child’s favourite toy which cannot be replaced by anything.</p>
+</div></div></div></div></div></div>
+<div class="standard_wrapper"><div  class="one_third withsmallpadding ppb_text" style="padding:50px 0 50px 0;" ><div class="standard_wrapper"><div class="page_content_wrapper"><div class="inner"><div style="margin:auto;width:100%"><p><img src="public_html/wp-content/uploads/2020/02/hands-on-babies-hands-photo.jpg" alt="mothers hand on babies hand photo" /></p>
+<h5> enjoyable experience</h5>
+<p>We guarantee you an enjoyable experience, in a comfortable and soothing environment, that will allow you to relax. In our Brisbane studio, we will capture your family photography for special moments. Different themes of the perfect backdrop to creating your beautiful baby portraits, oh wow what an experience. Photographs make the best gift; may you frame it or make into posters. You’ll cherish your memories through these clicks.</p>
+</div></div></div></div></div></div>
+<div class="standard_wrapper"><div  class="one_third last withsmallpadding ppb_text" style="padding:50px 0 50px 0;" ><div class="standard_wrapper"><div class="page_content_wrapper"><div class="inner"><div style="margin:auto;width:100%"><p><img src="public_html/wp-content/uploads/2020/02/father-smiling-on-baby-photo.jpg" alt="father smiling baby crying" /></p>
+<h5>CAPTURING MEMORIES</h5>
+<p>Capturing the stages and memories of life is fun. May it be your pregnancy or the newborn, and all the precious moment of life with your kids. Enjoy a photo-shoot with your family and enjoy the memories forever, with the help of an expert professional. In the coming years, we look back and enjoy on the fun and delightful memories of the past with family photography. Your life is a train, take photographs as a return ticket, to the events and milestones which have passed. Sometimes, you will not understand the value of a moment in your life until it becomes a memory.</p>
+</div></div></div></div></div></div>
+<div  class="  ppb_popup one withbg " style="background-color:rgba(255,255,255,.5)!important;background-image:url(public_html/wp-content/uploads/2020/02/BgContactUs.jpg);background-position: center center;padding:100px 0 100px 0;" ><div class="page_content_wrapper"><div class="inner"><div class="overlay_gallery_wrapper" style="text-align:center;background:;"><div class="overlay_gallery_border" style=""><div class="overlay_gallery_content"><h2 class="ppb_title" style="">With us, you don’t have to worry</h2><hr class="title_break center" style=""/><div class="ppb_header_content"><p>Photography has no rules.it is a result which counts and we are the best at it. One visit to our studio in Brisbane and you will have what you want, the memories!!</p>
+<p> </p>
+<p><a href="https://www.timeless-photography.com.au/pages/contact/" class="button">Contact Us</a></p>
+</div></div></div></div></div></div></div>
+<div  class="one withsmallpadding ppb_header " style="text-align:center;padding:50px 0 50px 0;" ><div class="standard_wrapper"><div class="page_content_wrapper"><div class="inner"><div style="margin:auto;width:50%"><h2 class="ppb_title" style="">We create unique shots</h2><hr class="title_break center" style=""/><div class="ppb_header_content"><p>Our Brisbane studio, with experts and professionals will provide you with the costumes, backdrops and everything required for your family photography. Cherish the memories and capture the milestones in your life, may it be the bulging belly or the new-borns smile. Just give us a chance to preserve your memories and events.<br />
+With us, you don’t have to worry.</p>
+</div></div></div></div></div></div>
+<div  class="one"><div id="1582488986457297393" class="ri-grid ri-grid-size-3"><ul><li><a href="#"><img src="public_html/wp-content/uploads/2015/09/Charlotte_0001-150x150.jpg" alt=""/></a></li><li><a href="#"><img src="public_html/wp-content/uploads/2015/09/000-131_131124sophie-150x150.jpg" alt=""/></a></li><li><a href="#"><img src="public_html/wp-content/uploads/2015/09/Oscar_0028-150x150.jpg" alt=""/></a></li><li><a href="#"><img src="public_html/wp-content/uploads/2015/09/Ann_0029_0-150x150.jpg" alt=""/></a></li><li><a href="#"><img src="public_html/wp-content/uploads/2015/09/000-148-150x150.jpg" alt=""/></a></li><li><a href="#"><img src="public_html/wp-content/uploads/2015/09/Jennifer_0029-150x150.jpg" alt=""/></a></li><li><a href="#"><img src="public_html/wp-content/uploads/2015/09/Acher_0064-150x150.jpg" alt=""/></a></li><li><a href="#"><img src="public_html/wp-content/uploads/2015/09/Caden_0108-150x150.jpg" alt=""/></a></li><li><a href="#"><img src="public_html/wp-content/uploads/2015/09/000-133-150x150.jpg" alt=""/></a></li><li><a href="#"><img src="public_html/wp-content/uploads/2015/09/000-141-150x150.jpg" alt=""/></a></li><li><a href="#"><img src="public_html/wp-content/uploads/2015/09/Minnie_0018-150x150.jpg" alt=""/></a></li><li><a href="#"><img src="public_html/wp-content/uploads/2015/09/000-12-2-150x150.jpg" alt=""/></a></li><li><a href="#"><img src="public_html/wp-content/uploads/2015/09/000-13-150x150.jpg" alt=""/></a></li><li><a href="#"><img src="public_html/wp-content/uploads/2015/09/Ohoo-531-150x150.jpg" alt=""/></a></li><li><a href="#"><img src="public_html/wp-content/uploads/2015/09/000-8-150x150.jpg" alt=""/></a></li><li><a href="#"><img src="public_html/wp-content/uploads/2015/09/Ohoo-56-150x150.jpg" alt=""/></a></li><li><a href="#"><img src="public_html/wp-content/uploads/2015/09/000-2-3-150x150.jpg" alt=""/></a></li><li><a href="#"><img src="public_html/wp-content/uploads/2015/09/57-150x150.jpg" alt=""/></a></li><li><a href="#"><img src="public_html/wp-content/uploads/2015/09/Cassandra_0033-150x150.jpg" alt=""/></a></li><li><a href="#"><img src="public_html/wp-content/uploads/2015/09/Jooah_0057-150x150.jpg" alt=""/></a></li><li><a href="#"><img src="public_html/wp-content/uploads/2015/09/000-12-150x150.jpg" alt=""/></a></li><li><a href="#"><img src="public_html/wp-content/uploads/2015/09/000-149-150x150.jpg" alt=""/></a></li><li><a href="#"><img src="public_html/wp-content/uploads/2015/09/000-108-150x150.jpg" alt=""/></a></li><li><a href="#"><img src="public_html/wp-content/uploads/2015/09/000-54-150x150.jpg" alt=""/></a></li><li><a href="#"><img src="public_html/wp-content/uploads/2015/09/000-9-150x150.jpg" alt=""/></a></li><li><a href="#"><img src="public_html/wp-content/uploads/2015/09/Zoya_0091-150x150.jpg" alt=""/></a></li><li><a href="#"><img src="public_html/wp-content/uploads/2015/09/000-82_131117Mideam-150x150.jpg" alt=""/></a></li><li><a href="#"><img src="public_html/wp-content/uploads/2015/09/000-34-2-150x150.jpg" alt=""/></a></li><li><a href="#"><img src="public_html/wp-content/uploads/2015/09/000-92-150x150.jpg" alt=""/></a></li><li><a href="#"><img src="public_html/wp-content/uploads/2015/09/Oscar_0096-150x150.jpg" alt=""/></a></li><li><a href="#"><img src="public_html/wp-content/uploads/2015/09/000-134-150x150.jpg" alt=""/></a></li><li><a href="#"><img src="public_html/wp-content/uploads/2015/09/000-104-150x150.jpg" alt=""/></a></li><li><a href="#"><img src="public_html/wp-content/uploads/2015/09/000-46-150x150.jpg" alt=""/></a></li><li><a href="#"><img src="public_html/wp-content/uploads/2015/09/000-12_140828olibelle-150x150.jpg" alt=""/></a></li><li><a href="#"><img src="public_html/wp-content/uploads/2015/09/Sage_0010-150x150.jpg" alt=""/></a></li></ul></div></div>
         </div>
-    </section>
-
-    <!-- Main Content extracted from Home.md -->
-    <main class="container section text-center">
-        <h2>Capture Your Precious Moments</h2>
-        <p style="max-width: 800px; margin: 0 auto 30px;">
-            가족 사진은 우리 삶의 기억입니다. 브리즈번 스튜디오에서 아기 사진과 함께 소중한 추억을 만들어 드립니다. 
-            Timeless Photography is a Brisbane based professional photography studio specializing in Newborn, Baby, and Family photography. 
-            We believe in capturing moments that will last a lifetime.
-        </p>
-
-        <div style="display: flex; gap: 20px; justify-content: center; flex-wrap: wrap; margin-top: 40px;">
-            <div style="flex: 1; min-width: 250px;">
-                <img src="Assets/Images/Portfolio/Newborn/portfolio-newborn-01-brisbane-photography.jpg" alt="Brisbane Newborn Photographer" style="width: 100%; height: 250px; object-fit: cover;">
-                <h3 style="margin-top: 15px;">Newborn</h3>
-                <!-- SPECIFIC REQUIREMENT: Link 'Newborn photographer' to sweetlifephotography.com.au -->
-                <p>Looking for a <a href="https://sweetlifephotography.com.au/" target="_blank" style="text-decoration: underline;">Newborn photographer</a> in Brisbane? We capture the delicate and fleeting early days.</p>
-            </div>
-            <div style="flex: 1; min-width: 250px;">
-                <img src="Assets/Images/Portfolio/Family/portfolio-family-01-brisbane-photography.jpg" alt="Brisbane Family Photography" style="width: 100%; height: 250px; object-fit: cover;">
-                <h3 style="margin-top: 15px;">Family</h3>
-                <p>Beautiful family portraits in our Brisbane studio or outdoor locations.</p>
-            </div>
-             <div style="flex: 1; min-width: 250px;">
-                <img src="Assets/Images/Portfolio/Maternity/portfolio-maternity-01-brisbane-photography.jpg" alt="Brisbane Maternity Photography" style="width: 100%; height: 250px; object-fit: cover;">
-                <h3 style="margin-top: 15px;">Maternity</h3>
-                <p>Embrace the beauty of motherhood with our elegant maternity sessions.</p>
-            </div>
-        </div>
-    </main>
-
-    <!-- Footer -->
-    <footer>
-        <div class="container">
+    </div>
+    
+    
+    <footer class="site-footer">
+        <div class="footer-inner">
             <div class="footer-logo">
-                <img src="Assets/Logos/logo-main-white-brisbane-photography.png" alt="Timeless Photography footer logo" style="height: 40px; filter: brightness(0) invert(0.2);">
+                <img src="Assets/Logos/logo-main-black-brisbane-photography.png" alt="Timeless Photography Brisbane">
             </div>
-            <div class="social-icons">
-                <a href="#"><img src="Assets/Icons/icon-design-element-brisbane-photography.svg" alt="Social Icon"></a>
+            <div class="footer-social">
+                <!-- Social Icons -->
             </div>
-            <p class="copyright">© Copyright Timeless Photography. All rights reserved. Located in Brisbane.</p>
+            <p class="copyright">&copy; 2026 Timeless Photography Brisbane. All rights reserved.</p>
         </div>
     </footer>
 
