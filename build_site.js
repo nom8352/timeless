@@ -17,8 +17,16 @@ const headerHTML = `
                 <ul>
                     <li><a href="index.html">HOME</a></li>
                     <li><a href="about.html">ABOUT</a></li>
-                    <li><a href="services.html">SERVICES</a></li>
                     <li><a href="gallery.html">GALLERY</a></li>
+                    <li class="menu-item menu-item-has-children"><a href="javascript:void(0);">SERVICES</a>
+                        <ul class="sub-menu">
+                            <li><a href="newborn-maternity.html">NEWBORN & MATERNITY</a></li>
+                            <li><a href="family-photography.html">FAMILY PHOTOGRAPHY</a></li>
+                            <li><a href="baby-photography.html">BABY PHOTOGRAPHY</a></li>
+                            <li><a href="hand-and-feet-sculptures.html">HAND AND FEET SCULPTURES</a></li>
+                            <li><a href="kids-cake-smash-photography.html">KIDS,CAKE SMASH PHOTOGRAPHY</a></li>
+                        </ul>
+                    </li>
                     <li><a href="pricing.html">PRICING</a></li>
                     <li><a href="contact.html">CONTACT</a></li>
                 </ul>
@@ -80,20 +88,12 @@ const pagesToBuild = {
     'Home': 'index.html',
     'About Us': 'about.html',
     'Gallery': 'gallery.html',
-    'Pricing': 'pricing.html',
-    'Contact Us': 'contact.html'
+    'Baby Photography Brisbane': 'baby-photography.html',
+    'Newborn Photography Brisbane': 'newborn-maternity.html',
+    'Family Photography Brisbane': 'family-photography.html',
+    'Hand and Feet Sculptures': 'hand-and-feet-sculptures.html',
+    'Kids,Cake Smash Photography Brisbane': 'kids-cake-smash-photography.html'
 };
-
-const servicePages = [
-    'Baby Photography Brisbane',
-    'Newborn Photography Brisbane',
-    'Photography Brisbane',
-    'Family Photography Brisbane',
-    'Kids,Cake Smash Photography Brisbane',
-    'Hand and Feet Sculptures'
-];
-
-let servicesContent = '';
 
 for (const data of pagesData) {
     let content = data.content;
@@ -109,11 +109,5 @@ for (const data of pagesData) {
         const fileName = pagesToBuild[data.title];
         fs.writeFileSync('f:\\Antigravity\\timeless\\' + fileName, getTemplate(data.title, content), 'utf8');
         console.log('Built ' + fileName + ' from SQL (' + data.title + ')');
-    } else if (servicePages.includes(data.title)) {
-        servicesContent += content + '<hr/>';
     }
 }
-
-// Write the combined Services page
-fs.writeFileSync('f:\\Antigravity\\timeless\\services.html', getTemplate('Services', servicesContent), 'utf8');
-console.log('Built services.html from combined SQL Service pages');
