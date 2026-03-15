@@ -18,6 +18,7 @@ const headerHTML = `
                     <li><a href="index.html">HOME</a></li>
                     <li><a href="about.html">ABOUT</a></li>
                     <li><a href="services.html">SERVICES</a></li>
+                    <li><a href="gallery.html">GALLERY</a></li>
                     <li><a href="pricing.html">PRICING</a></li>
                     <li><a href="contact.html">CONTACT</a></li>
                 </ul>
@@ -78,6 +79,7 @@ function getTemplate(title, content) {
 const pagesToBuild = {
     'Home': 'index.html',
     'About Us': 'about.html',
+    'Gallery': 'gallery.html',
     'Pricing': 'pricing.html',
     'Contact Us': 'contact.html'
 };
