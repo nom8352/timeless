@@ -135,6 +135,7 @@ header.site-header {
     border: none;
     border-top: 1px solid #e5e5e5;
     margin: 0 30px;
+    width: calc(100% - 60px);
 }
 
 .main-nav {
@@ -567,4 +568,189 @@ footer {
 
 .mobile-menu-toggle span {
     transition: all 0.3s ease;
+}
+
+/* Static rendering for original WordPress page-builder content. */
+.wp-original-content {
+    width: 100%;
+    overflow: hidden;
+}
+
+.wp-original-content rs-module-wrap,
+.wp-original-content rs-module,
+.wp-original-content rs-slides,
+.wp-original-content rs-slide {
+    display: block !important;
+    width: 100% !important;
+}
+
+.wp-original-content rs-module-wrap,
+.wp-original-content rs-module,
+.wp-original-content rs-slides,
+.wp-original-content rs-slide {
+    position: relative;
+    min-height: 510px;
+    overflow: hidden;
+}
+
+.wp-original-content rs-slide > img.rev-slidebg {
+    position: absolute;
+    inset: 0;
+    width: 100% !important;
+    max-width: none;
+    height: 100% !important;
+    object-fit: cover;
+}
+
+.wp-original-content rs-slide::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.28);
+    pointer-events: none;
+}
+
+.wp-original-content rs-layer {
+    position: absolute;
+    left: max(6vw, 40px);
+    z-index: 2;
+    display: block;
+    max-width: min(680px, 78vw);
+    color: #fff;
+    font-family: Montserrat, Arial, sans-serif;
+    line-height: 1.25;
+}
+
+.wp-original-content rs-layer:first-of-type {
+    top: 16%;
+    font-size: 38px;
+    font-weight: 500;
+}
+
+.wp-original-content rs-layer:nth-of-type(2) {
+    top: 52%;
+    font-family: Hind, Arial, sans-serif;
+    font-size: 19px;
+    font-style: italic;
+    line-height: 1.4;
+}
+
+.wp-original-content .parallax {
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+}
+
+.wp-original-content iframe {
+    max-width: 100%;
+}
+
+.form-honeypot {
+    position: absolute !important;
+    left: -9999px !important;
+    width: 1px !important;
+    height: 1px !important;
+}
+
+.original-page-title,
+.original-post,
+.blog-list {
+    width: min(1100px, calc(100% - 40px));
+    margin: 0 auto;
+}
+
+.original-page-title {
+    padding: 90px 0;
+    text-align: center;
+}
+
+.original-page-title h1,
+.original-post h1 {
+    margin-bottom: 24px;
+    font-size: 36px;
+}
+
+.blog-list {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 0 50px;
+    padding: 20px 0 90px;
+}
+
+.blog-list-item {
+    padding: 38px 0;
+    border-bottom: 1px solid #ddd;
+}
+
+.blog-list-item h2 {
+    margin: 8px 0 16px;
+    font-size: 24px;
+}
+
+.blog-date {
+    color: #777;
+    font-size: 12px;
+    text-transform: uppercase;
+}
+
+.original-post {
+    padding: 80px 0;
+}
+
+.original-post > header {
+    margin-bottom: 45px;
+    text-align: center;
+}
+
+.footer-instagram {
+    display: inline-block;
+    margin-bottom: 14px;
+    color: #222;
+    text-transform: uppercase;
+}
+
+@media (max-width: 768px) {
+    .wp-original-content rs-module-wrap,
+    .wp-original-content rs-module,
+    .wp-original-content rs-slides,
+    .wp-original-content rs-slide {
+        min-height: 460px;
+    }
+
+    .wp-original-content rs-layer {
+        left: 24px;
+        max-width: calc(100vw - 48px);
+    }
+
+    .wp-original-content rs-layer:first-of-type {
+        top: 48px;
+        font-size: 25px;
+        line-height: 1.22;
+    }
+
+    .wp-original-content rs-layer:nth-of-type(2) {
+        top: auto;
+        bottom: 26px;
+        font-size: 15px;
+        line-height: 1.35;
+    }
+
+    .wp-original-content .parallax {
+        background-attachment: scroll;
+    }
+
+    .blog-list {
+        grid-template-columns: 1fr;
+    }
+}
+/* Accessible headings preserve the original visual layout while giving each page a clear document title. */
+.visually-hidden {
+    position: absolute !important;
+    width: 1px !important;
+    height: 1px !important;
+    padding: 0 !important;
+    margin: -1px !important;
+    overflow: hidden !important;
+    clip: rect(0, 0, 0, 0) !important;
+    white-space: nowrap !important;
+    border: 0 !important;
 }

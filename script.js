@@ -7,6 +7,7 @@ document.addEventListener('DOMContentLoaded', () => {
         mobileToggle.addEventListener('click', () => {
             mainNav.classList.toggle('nav-open');
             mobileToggle.classList.toggle('active');
+            mobileToggle.setAttribute('aria-expanded', String(mainNav.classList.contains('nav-open')));
         });
     }
 
@@ -15,8 +16,11 @@ document.addEventListener('DOMContentLoaded', () => {
     serviceItems.forEach(item => {
         item.addEventListener('click', (e) => {
             if (window.innerWidth <= 768) {
-                e.preventDefault();
-                item.parentElement.classList.toggle('sub-open');
+                const parent = item.parentElement;
+                if (!parent.classList.contains('sub-open')) {
+                    e.preventDefault();
+                    parent.classList.add('sub-open');
+                }
             }
         });
     });
@@ -31,7 +35,7 @@ document.addEventListener('DOMContentLoaded', () => {
             <span class="lightbox-close">&times;</span>
             <span class="lightbox-nav lightbox-prev">&#8249;</span>
             <span class="lightbox-nav lightbox-next">&#8250;</span>
-            <img src="" alt="Gallery Image" />
+            <img alt="Gallery Image" />
         `;
         document.body.appendChild(overlay);
 

@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+Disallow: /cart
+Disallow: /checkout
+Disallow: /my-account
+Sitemap: https://timeless-photography.com.au/sitemap.xml
