@@ -35,3 +35,10 @@ Last updated: 2026-07-23
 - Local HTML validation passed for the index and all five posts. Desktop and mobile browser checks found no console errors, failed requests or horizontal overflow.
 - Blog index Lighthouse: Performance 73, Accessibility 100, Best Practices 100, SEO 100, CLS 0.
 - Production deployment verified after commit `3adb883`: the live index, legacy post and editorial post passed desktop/mobile checks with all images and related-story cards loaded.
+
+## Shared header
+
+- The site-wide header uses a compact single row: logo on the left, desktop navigation on the right and Instagram at the far edge.
+- Desktop header height is 88px with a 44px logo; mobile closes to 75px with a 40px logo and right-aligned menu button.
+- The desktop-only hamburger was removed, mobile navigation remains keyboard-accessible, and the Services submenu no longer shows legacy list markers.
+- `style.css?v=3.1` is generated across every HTML page to invalidate the previous cached header styles.
