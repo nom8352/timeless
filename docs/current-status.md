@@ -42,3 +42,4 @@ Last updated: 2026-07-23
 - Desktop header height is 88px with a 44px logo; mobile closes to 75px with a 40px logo and right-aligned menu button.
 - The desktop-only hamburger was removed, mobile navigation remains keyboard-accessible, and the Services submenu no longer shows legacy list markers.
 - `style.css?v=3.1` is generated across every HTML page to invalidate the previous cached header styles.
+- Production deployment verified after commit `6929b28` on the homepage and blog at desktop and mobile widths.
