@@ -25,3 +25,12 @@ Last updated: 2026-07-23
 - The live article, blog listing, sitemap, stylesheet, WebP hero and JPEG social image all return HTTP 200.
 - Live desktop and mobile browser checks passed with the expected canonical, Open Graph image, BlogPosting schema, no console errors, no failed resources and no horizontal overflow.
 - Quuu Promote submission is still pending; use `QUUU-PROMOTE-FAMILY-PHOTO-ARCHIVE.md` for the prepared submission copy.
+
+## Blog design refresh
+
+- The blog index now uses a large featured story, image-led story cards and a responsive two-column archive.
+- All five posts share a consistent journal masthead, category/date/read-time metadata, cover treatment, readable article width and related-story navigation.
+- Existing post URLs, source content, canonical URLs and BlogPosting schema remain intact.
+- Blog-only CSS lives in `blog.css`; post presentation metadata and generated markup remain owned by `build_site.js`.
+- Local HTML validation passed for the index and all five posts. Desktop and mobile browser checks found no console errors, failed requests or horizontal overflow.
+- Blog index Lighthouse: Performance 73, Accessibility 100, Best Practices 100, SEO 100, CLS 0.

@@ -37,7 +37,7 @@ const EDITORIAL_POSTS = [
     <p class="archive-lede">A camera roll is a collection. A family archive is a collection that someone else can find, open, understand and care about.</p>
     <p>Most families now make more photographs than any previous generation. We record birthdays, school mornings, pets, holidays, grandparents and ordinary afternoons without thinking twice. Yet many of those images live inside one phone, one account or one stream so crowded that nobody can find the picture that matters.</p>
     <p>The risk is not only a broken device. Passwords disappear. Storage plans lapse. File formats and platforms change. Thousands of near-duplicates bury the few photographs that explain who your family was. A child can inherit every file and still inherit no usable story.</p>
-    <aside class="archive-callout"><strong>The short answer</strong><span>Choose the photographs that carry the story, keep verified copies in separate places, add names and context, share them deliberately and make a small number visible in print.</span></aside>
+    <aside class="archive-callout" aria-label="Article summary"><strong>The short answer</strong><span>Choose the photographs that carry the story, keep verified copies in separate places, add names and context, share them deliberately and make a small number visible in print.</span></aside>
 </div>
 
 <section id="archive-not-camera-roll">
@@ -155,6 +155,66 @@ const EDITORIAL_POSTS = [
 </section>`
     }
 ];
+
+const POST_PRESENTATION = {
+    'preserve-family-photos-phone-backup': {
+        title: 'Your Phone Has 20,000 Photos. Your Children May Inherit None of Them.',
+        category: 'Family stories',
+        readTime: '8 min read',
+        deck: 'A practical rescue plan for turning an overflowing camera roll into a family archive people can actually find, understand and keep.',
+        image: '/Assets/Images/Editorial/family-photo-archive-hero-960.webp',
+        imageAlt: 'Mother holding a phone and a printed family photograph while her daughter looks through an album',
+        width: 960,
+        height: 506,
+        focalClass: 'focal-center'
+    },
+    'how-to-select-the-best-newborn-photography-brisbane-professional': {
+        title: 'How to Select the Best Newborn Photographer in Brisbane',
+        category: 'Newborn guide',
+        readTime: '4 min read',
+        deck: 'The practical questions that help families compare newborn photographers with more confidence than price alone.',
+        image: '/Assets/Photography/images/2020/02/new-born-baby-sleeping.jpg',
+        imageAlt: 'Sleeping newborn wearing a delicate crown during a Brisbane studio portrait session',
+        width: 1920,
+        height: 1280,
+        focalClass: 'focal-newborn'
+    },
+    'newborn-photography-brisbane-get-access-with-the-newborn-baby-memories': {
+        title: 'Newborn Photography: Keeping the Memories That Change Fast',
+        category: 'Newborn stories',
+        readTime: '4 min read',
+        deck: 'Why the earliest family photographs become more valuable as the small details of newborn life begin to change.',
+        image: '/Assets/Photography/images/2020/02/sibilings-baby.jpg',
+        imageAlt: 'Older sister leaning close to her sleeping newborn sibling in a bright studio portrait',
+        width: 1920,
+        height: 1280,
+        focalClass: 'focal-center'
+    },
+    'how-to-capture-the-special-moments-of-the-child': {
+        title: 'How to Capture the Special Moments of Childhood',
+        category: 'Family photography',
+        readTime: '3 min read',
+        deck: 'Simple ways to notice expression, connection and the fleeting details that make a family photograph feel personal.',
+        image: '/Assets/Photography/images/2018/08/family-outdoor-happy-happiness-160994.jpeg',
+        imageAlt: 'Family lying together on grass and making playful expressions for the camera',
+        width: 1125,
+        height: 750,
+        focalClass: 'focal-family',
+        removeFirstBodyImage: true
+    },
+    'useful-tips-for-portrait-photography': {
+        title: 'Useful Tips for More Expressive Portrait Photography',
+        category: 'Photography guide',
+        readTime: '4 min read',
+        deck: 'A straightforward introduction to light, focus and visual choices that make portraits feel more intentional.',
+        image: '/Assets/Photography/images/2018/05/pexels-photo-759960.jpeg',
+        imageAlt: 'Photographer holding a camera lens toward a sunlit landscape',
+        width: 1280,
+        height: 853,
+        focalClass: 'focal-center',
+        removeFirstBodyImage: true
+    }
+};
 
 const pageReferrals = {
     Home: {
@@ -288,7 +348,11 @@ const pageSeo = {
     'Blog': {
         path: '/blog',
         title: 'Photography Tips & Stories | Timeless Brisbane',
-        description: 'Read practical newborn, baby, family and portrait photography tips from Timeless Photography Brisbane.'
+        description: 'Read practical newborn, baby, family and portrait photography tips from Timeless Photography Brisbane.',
+        accessibleViewport: true,
+        minimalCss: true,
+        preloadImage: '/Assets/Images/Editorial/family-photo-archive-hero-960.webp',
+        stylesheets: ['/blog.css?v=1.0']
     },
     'Privacy Policy': {
         path: '/privacy-policy',
@@ -652,7 +716,7 @@ function schemaGraph(title, seo, post = null) {
         graph.push({
             '@type': 'BlogPosting',
             '@id': `${url}#article`,
-            headline: post.post_title,
+            headline: postPresentation(post).title,
             description: seo.description,
             datePublished: post.post_date.replace(' ', 'T') + '+10:00',
             dateModified: post.post_modified.replace(' ', 'T') + '+10:00',
@@ -700,7 +764,7 @@ function pageTemplate(title, content, bodyClass = '', seo = pageSeo[title], post
     <script type="application/ld+json">${schemaGraph(title, seo, post)}</script>
 ${seo.preloadImage ? `    <link rel="preload" href="${seo.preloadImage}" as="image" type="image/webp">\n` : ''}    <link rel="icon" type="image/png" href="Assets/Logos/favicon.png">
 ${seo.minimalCss ? '' : `    <link rel="stylesheet" href="Assets/Photography/css/reset.css" type="text/css" media="all">\n    <link rel="stylesheet" href="Assets/Photography/css/wordpress.css" type="text/css" media="all">\n    <link rel="stylesheet" href="Assets/Photography/css/screen.css" type="text/css" media="all">\n    <link rel="stylesheet" href="Assets/Photography/css/grid.css" type="text/css" media="all">\n`}    <link rel="stylesheet" href="style.css?v=3.0" type="text/css" media="all">
-${seo.stylesheet ? `    <link rel="stylesheet" href="${seo.stylesheet}" type="text/css" media="all">\n` : ''}</head>
+${(seo.stylesheets || (seo.stylesheet ? [seo.stylesheet] : [])).map((stylesheet) => `    <link rel="stylesheet" href="${stylesheet}" type="text/css" media="all">\n`).join('')}</head>
 <body class="page-template-default page ${bodyClass}">
 ${headerHtml}
     <main id="wrapper">
@@ -736,19 +800,67 @@ function stripHtml(value) {
         .trim();
 }
 
-function blogListing(posts) {
-    const items = posts.map((post) => {
-        const postPath = `/${post.post_name}`;
-        const excerpt = stripHtml(post.post_excerpt || post.post_content).slice(0, 220);
-        return `<article class="blog-list-item"><p class="blog-date">${post.post_date.slice(0, 10)}</p><h2><a href="${postPath}">${post.post_title}</a></h2><p>${excerpt}${excerpt.length === 220 ? '&hellip;' : ''}</p><a class="button ghost" href="${postPath}">Read More</a></article>`;
-    }).join('\n');
-    return `<section class="original-page-title"><h1>Blog</h1></section><div class="blog-list">${items}</div>`;
+function postPresentation(post) {
+    const fallback = stripHtml(post.post_excerpt || post.post_content).slice(0, 180);
+    return POST_PRESENTATION[post.post_name] || {
+        title: post.post_title,
+        category: 'Photography journal',
+        readTime: '4 min read',
+        deck: fallback,
+        image: '/Assets/Images/Portfolio/Family/portfolio-family-01-brisbane-photography.jpg',
+        imageAlt: 'Timeless Photography family portrait',
+        width: 1024,
+        height: 1280,
+        focalClass: 'focal-center'
+    };
 }
 
-function postPage(post) {
-    const content = post.editorial ? post.post_content : localizeContent(post.post_content, post.post_title);
+function formatPostDate(dateValue) {
+    const [year, month, day] = dateValue.slice(0, 10).split('-').map(Number);
+    const monthNames = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
+    return `${day} ${monthNames[month - 1]} ${year}`;
+}
+
+function postMeta(post) {
+    const presentation = postPresentation(post);
+    return `<div class="article-meta"><span>${presentation.category}</span><time datetime="${post.post_date.slice(0, 10)}">${formatPostDate(post.post_date)}</time><span>${presentation.readTime}</span></div>`;
+}
+
+function postCard(post) {
+    const presentation = postPresentation(post);
+    const postPath = `/${post.post_name}`;
+    return `<article class="journal-card">
+        <a class="journal-card-media" href="${postPath}" aria-label="Read ${escapeHtml(presentation.title)}"><img class="${presentation.focalClass}" src="${presentation.image}" width="${presentation.width}" height="${presentation.height}" loading="lazy" decoding="async" alt="${escapeHtml(presentation.imageAlt)}"></a>
+        <div class="journal-card-body">${postMeta(post)}<h2><a href="${postPath}">${escapeHtml(presentation.title)}</a></h2><p>${escapeHtml(presentation.deck)}</p><a class="journal-read-link" href="${postPath}">Read story <span aria-hidden="true">&rarr;</span></a></div>
+    </article>`;
+}
+
+function blogListing(posts) {
+    const [featured, ...remaining] = posts;
+    const presentation = postPresentation(featured);
+    const postPath = `/${featured.post_name}`;
+    const cards = remaining.map(postCard).join('\n');
+    return `<div class="blog-index">
+        <header class="blog-index-intro"><p class="journal-eyebrow">The Timeless journal</p><h1>Stories worth keeping.</h1><p>Photography, family life and the small details that become the story.</p></header>
+        <article class="journal-feature">
+            <a class="journal-feature-media" href="${postPath}" aria-label="Read ${escapeHtml(presentation.title)}"><img class="${presentation.focalClass}" src="${presentation.image}" width="${presentation.width}" height="${presentation.height}" fetchpriority="high" alt="${escapeHtml(presentation.imageAlt)}"></a>
+            <div class="journal-feature-content">${postMeta(featured)}<h2><a href="${postPath}">${escapeHtml(presentation.title)}</a></h2><p>${escapeHtml(presentation.deck)}</p><a class="journal-read-link" href="${postPath}">Read featured story <span aria-hidden="true">&rarr;</span></a></div>
+        </article>
+        <section class="journal-latest" aria-labelledby="journal-latest-title"><div class="journal-section-heading"><p class="journal-eyebrow">From the archive</p><h2 id="journal-latest-title">More from Timeless</h2></div><div class="journal-grid">${cards}</div></section>
+    </div>`;
+}
+
+function postPage(post, posts) {
+    const presentation = postPresentation(post);
+    let content = post.editorial
+        ? post.post_content
+        : localizeContent(post.post_content, post.post_title).replace(/(<img\b[^>]*?)\s*\/>/gi, '$1>');
+    if (presentation.removeFirstBodyImage) content = content.replace(/<img\b[^>]*>/i, '');
     const className = post.editorial ? 'original-post editorial-post archive-guide' : 'original-post';
-    return `<article class="${className}"><header><p class="blog-date">${post.post_date.slice(0, 10)}</p><h1>${post.post_title}</h1></header>${content}</article>`;
+    const cover = post.editorial ? '' : `<figure class="article-cover"><img class="${presentation.focalClass}" src="${presentation.image}" width="${presentation.width}" height="${presentation.height}" fetchpriority="high" alt="${escapeHtml(presentation.imageAlt)}"></figure>`;
+    const articleContent = post.editorial ? content : `<div class="article-body">${content}</div>`;
+    const related = posts.filter((candidate) => candidate.post_name !== post.post_name).slice(0, 3).map(postCard).join('\n');
+    return `<article class="${className}"><header class="article-masthead"><a class="article-back" href="/blog">Timeless journal</a>${postMeta(post)}<h1>${escapeHtml(presentation.title)}</h1><p class="article-deck">${escapeHtml(presentation.deck)}</p></header>${cover}${articleContent}</article><aside class="article-related" aria-labelledby="article-related-title"><div class="journal-section-heading"><p class="journal-eyebrow">Keep reading</p><h2 id="article-related-title">More stories</h2></div><div class="journal-grid">${related}</div></aside>`;
 }
 
 function postSeo(post) {
@@ -768,12 +880,19 @@ function postSeo(post) {
         preloadImage: '/Assets/Images/Editorial/family-photo-archive-hero-960.webp',
         accessibleViewport: true,
         minimalCss: true,
-        stylesheet: '/family-photo-archive.css?v=1.0'
+        stylesheets: ['/family-photo-archive.css?v=2.0', '/blog.css?v=1.0']
     } : {};
+    const presentation = postPresentation(post);
     return {
         path: `/${post.post_name}`,
         title: seoTitles[post.post_name] || `${post.post_title} | Timeless`,
-        description: excerpt || `Photography advice from ${SITE_NAME}.`,
+        description: presentation.deck || excerpt || `Photography advice from ${SITE_NAME}.`,
+        ogTitle: presentation.title,
+        ogDescription: presentation.deck,
+        image: `${SITE_URL}${presentation.image}`,
+        accessibleViewport: true,
+        minimalCss: true,
+        stylesheets: ['/blog.css?v=1.0'],
         ...editorialSeo
     };
 }
@@ -881,14 +1000,14 @@ function build() {
         content = injectContextualReferrals(content, page.post_title);
         content = appendEditorialSections(content, page.post_title);
 
-        const bodyClass = `page-${page.post_name}`;
+        const bodyClass = page.post_title === 'Blog' ? 'page-blog' : `page-${page.post_name}`;
         fs.writeFileSync(path.join(ROOT, filename), pageTemplate(page.post_title, content, bodyClass, pageSeo[page.post_title]), 'utf8');
         console.log(`Built ${filename} from WordPress page ${page.ID} (${page.post_title})`);
     }
 
     for (const post of blogPosts) {
         const filename = `${post.post_name}.html`;
-        fs.writeFileSync(path.join(ROOT, filename), pageTemplate(post.post_title, postPage(post), 'single-post', postSeo(post), post), 'utf8');
+        fs.writeFileSync(path.join(ROOT, filename), pageTemplate(post.post_title, postPage(post, blogPosts), 'single-post', postSeo(post), post), 'utf8');
         console.log(`Built ${filename} from WordPress post ${post.ID}`);
     }
 
