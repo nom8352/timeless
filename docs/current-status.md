@@ -21,4 +21,7 @@ Last updated: 2026-07-23
 - Local implementation complete.
 - Local checks passed: generated output is idempotent, the new article and blog listing pass `html-validate`, and browser checks found no console errors, failed images or horizontal overflow on desktop and mobile.
 - Local Lighthouse: Performance 81, Accessibility 100, Best Practices 100, SEO 100, CLS 0.
-- Production deployment and live verification pending.
+- Production deployment verified on 2026-07-23 after commit `cd4c68f` reached `main`.
+- The live article, blog listing, sitemap, stylesheet, WebP hero and JPEG social image all return HTTP 200.
+- Live desktop and mobile browser checks passed with the expected canonical, Open Graph image, BlogPosting schema, no console errors, no failed resources and no horizontal overflow.
+- Quuu Promote submission is still pending; use `QUUU-PROMOTE-FAMILY-PHOTO-ARCHIVE.md` for the prepared submission copy.

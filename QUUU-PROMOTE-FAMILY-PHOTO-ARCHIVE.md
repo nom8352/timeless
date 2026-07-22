@@ -1,6 +1,6 @@
 # Quuu Promote package: family photo archive
 
-Status: Built in source, not yet deployed or submitted
+Status: Published on Timeless, not yet submitted to Quuu Promote
 
 Prepared: 2026-07-23
 
@@ -8,7 +8,7 @@ Project: Timeless Photography Brisbane
 
 ## Publishing metadata
 
-- **Planned URL:** `https://timeless-photography.com.au/preserve-family-photos-phone-backup`
+- **Live URL:** `https://timeless-photography.com.au/preserve-family-photos-phone-backup`
 - **Canonical URL:** `https://timeless-photography.com.au/preserve-family-photos-phone-backup`
 - **SEO title:** How to Preserve Family Photos Before They Disappear | Timeless
 - **Social title/H1:** Your Phone Has 20,000 Photos. Your Children May Inherit None of Them.
@@ -60,5 +60,5 @@ A full camera roll is not a family archive. Here is the 30-minute rescue plan mo
 - [x] Dedicated canonical, description, social title and BlogPosting schema
 - [x] Dedicated responsive hero and 1200 x 630 OG image
 - [x] Blog discovery and sitemap entry generated from source
-- [ ] Production URL, images and social metadata verified
+- [x] Production URL, images and social metadata verified
 - [ ] Submitted to Quuu Promote
