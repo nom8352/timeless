@@ -16,6 +16,146 @@ const SWEETLIFE_URLS = {
     cakeSmash: 'https://sweetlifephotography.com.au/cake-smash-first-birthday-photography-brisbane/'
 };
 
+const EDITORIAL_POSTS = [
+    {
+        ID: 'editorial-family-photo-archive',
+        post_type: 'post',
+        post_status: 'publish',
+        post_name: 'preserve-family-photos-phone-backup',
+        post_title: 'Your Phone Has 20,000 Photos. Your Children May Inherit None of Them.',
+        post_date: '2026-07-23 08:00:00',
+        post_modified: '2026-07-23 08:00:00',
+        post_excerpt: 'Your phone may hold thousands of family photos, but that is not an archive. Use this practical plan to select, back up, label, share and print them.',
+        editorial: true,
+        post_content: `
+<figure class="archive-hero">
+    <img src="/Assets/Images/Editorial/family-photo-archive-hero.webp" srcset="/Assets/Images/Editorial/family-photo-archive-hero-960.webp 960w, /Assets/Images/Editorial/family-photo-archive-hero.webp 1728w" sizes="(max-width: 760px) calc(100vw - 32px), 1100px" width="1728" height="910" fetchpriority="high" alt="Surprised mother holding a blank phone and a printed family photograph while her daughter looks through a photo album">
+    <figcaption>A full camera roll feels permanent until the phone, account or person who understands it is no longer available.</figcaption>
+</figure>
+
+<div class="archive-intro">
+    <p class="archive-lede">A camera roll is a collection. A family archive is a collection that someone else can find, open, understand and care about.</p>
+    <p>Most families now make more photographs than any previous generation. We record birthdays, school mornings, pets, holidays, grandparents and ordinary afternoons without thinking twice. Yet many of those images live inside one phone, one account or one stream so crowded that nobody can find the picture that matters.</p>
+    <p>The risk is not only a broken device. Passwords disappear. Storage plans lapse. File formats and platforms change. Thousands of near-duplicates bury the few photographs that explain who your family was. A child can inherit every file and still inherit no usable story.</p>
+    <aside class="archive-callout"><strong>The short answer</strong><span>Choose the photographs that carry the story, keep verified copies in separate places, add names and context, share them deliberately and make a small number visible in print.</span></aside>
+</div>
+
+<section id="archive-not-camera-roll">
+    <p class="archive-kicker">The uncomfortable distinction</p>
+    <h2>More photos do not automatically create more memory</h2>
+    <p>Imagine handing someone an unsorted box containing 20,000 prints. Half are duplicates. Many are screenshots. Some are blurry. Nobody is named and the dates are unreliable. The important photographs are in there, but the work needed to understand them is so large that the box may stay closed.</p>
+    <p>A phone library can become the digital version of that box. Search tools help, but they do not know why one ordinary kitchen photograph matters more than twenty perfect sunset pictures. They cannot explain a family nickname, identify a house or say that this was the last photograph with a grandparent.</p>
+    <div class="archive-reality-grid" role="group" aria-label="Difference between a camera roll and a family archive">
+        <div><span>Camera roll</span><strong>Everything captured</strong><p>Fast, automatic and useful for daily life, but crowded with duplicates, screenshots and forgotten context.</p></div>
+        <div><span>Family archive</span><strong>What carries the story</strong><p>Selected, copied, labelled and understandable to someone who was not there when the image was made.</p></div>
+    </div>
+</section>
+
+<section id="find-everything">
+    <p class="archive-kicker">Step 1</p>
+    <h2>Find every place the photographs are hiding</h2>
+    <p>Start with an inventory, not a clean-up. List every phone, tablet, computer, memory card, external drive, cloud account and private message thread that may contain family photographs. Include an old device even if it has not been switched on for years.</p>
+    <p>Do not reorganise while searching. The first goal is to understand the number of locations and which ones are vulnerable. Mark any device that is damaged, any account that only one person can access and any storage service that is no longer being paid for.</p>
+    <p>The US National Archives' guide to <a href="https://www.archives.gov/files/preservation/formats/pdf/preserving-your-digital-memories.pdf" target="_blank" rel="noopener noreferrer">preserving personal digital photographs</a> recommends identifying all locations first, including cameras, computers, removable media and photographs stored on the web.</p>
+</section>
+
+<section id="choose-keepers">
+    <p class="archive-kicker">Step 2</p>
+    <h2>Choose a family 100, not a perfect 100</h2>
+    <p>Trying to organise every image is the point where most photo projects stop. Make the first decision smaller: choose up to 100 photographs that tell the story of one year.</p>
+    <p>Do not select only the technically best images. Include people, places, relationships and ordinary details. A useful annual set might contain:</p>
+    <ul class="archive-list">
+        <li>everyone who was central to family life that year;</li>
+        <li>the home, neighbourhood, school or places you returned to;</li>
+        <li>one image from each important event rather than every version;</li>
+        <li>ordinary routines that would otherwise be forgotten;</li>
+        <li>at least a few photographs that include the person usually behind the camera.</li>
+    </ul>
+    <p>If 100 feels impossible, choose 12: one photograph for each month. A small completed archive is more valuable than a perfect system that never begins.</p>
+</section>
+
+<section id="keep-originals">
+    <p class="archive-kicker">Step 3</p>
+    <h2>Keep the best available original</h2>
+    <p>A photograph downloaded from social media or copied from a message may be smaller than the file made by the camera. Keep the highest-quality original you can find, especially for the photographs chosen for your annual set.</p>
+    <p>Do not repeatedly edit and overwrite the only copy. Keep the original file, then create edited or cropped versions beside it. Use simple folders that another person can understand, such as <strong>2026 / Family 100 / Originals</strong> and <strong>2026 / Family 100 / Edited</strong>.</p>
+    <p>Professional photographs should also stay with the download and usage information supplied by the photographer. If you are unsure which file is intended for printing, ask before resizing or sending screenshots to a printer.</p>
+</section>
+
+<section id="verify-copies">
+    <p class="archive-kicker">Step 4</p>
+    <h2>Make copies that cannot fail together</h2>
+    <p>Sync is convenient, but it is not the same as an independent backup. If a deletion, account problem or corrupted library is synchronised everywhere, the problem can travel with it.</p>
+    <p>A practical starting rule is 3-2-1: keep three copies, on two kinds of storage, with one copy in another location. For a family archive, that could mean the working library on a computer, a separate external drive and an encrypted cloud copy or drive stored with a trusted relative.</p>
+    <p>The Library of Congress discusses this <a href="https://blogs.loc.gov/thesignal/2013/07/what-people-are-asking-about-personal-digital-archiving-part-2/" target="_blank" rel="noopener noreferrer">3-2-1 approach to personal digital archiving</a> and stresses that storage devices eventually become obsolete. A backup is only real when you can open it.</p>
+    <div class="archive-flow" role="group" aria-label="Three copy family photo backup plan">
+        <div><span>01</span><strong>Working copy</strong><p>The library you organise and use.</p></div>
+        <div><span>02</span><strong>Local backup</strong><p>A separate drive, disconnected after backup.</p></div>
+        <div><span>03</span><strong>Off-site copy</strong><p>Encrypted cloud storage or another secure location.</p></div>
+    </div>
+    <p>Set one annual date to open a sample from every copy. Replace failing drives and move important files when a service or format is becoming difficult to use.</p>
+</section>
+
+<section id="add-context">
+    <p class="archive-kicker">Step 5</p>
+    <h2>Add the information a stranger would need</h2>
+    <p>Future family members may recognise a face but not know the name, relationship or place. A little context turns an attractive photograph into a record.</p>
+    <p>For your selected photographs, record full names, approximate date, place and one sentence about why the moment mattered. This can live in photo metadata, a spreadsheet, a text file inside the folder or captions in a printed album. The method matters less than keeping the description with the photographs.</p>
+    <blockquote class="archive-quote">"Christmas at Grandma's" is better than nothing. "Christmas lunch at Mei's home in Brisbane, 2026, the year all four cousins met" is a story someone else can use.</blockquote>
+</section>
+
+<section id="share-carefully">
+    <p class="archive-kicker">Step 6</p>
+    <h2>Share the archive without making every image public</h2>
+    <p>Social media is useful for conversation, but it should not be the only home of a family photograph. Platforms compress images, accounts can become inaccessible and a public audience is not the same as a family archive.</p>
+    <p>Choose who needs access and how it should be shared. A private family folder, an encrypted drive or a printed album can give relatives access without publishing every image.</p>
+    <p>When children are identifiable, privacy becomes part of preservation. The Australian eSafety Commissioner advises families to consider consent, locations, uniforms, routines and who can see a child's image. Review its current <a href="https://www.esafety.gov.au/parents/issues-and-advice/privacy-child" target="_blank" rel="noopener noreferrer">child privacy and photo-sharing guidance</a>, and involve children in decisions as they become old enough to express a preference.</p>
+</section>
+
+<section id="make-visible">
+    <p class="archive-kicker">Step 7</p>
+    <h2>Make the photographs visible before they become history</h2>
+    <p>Preservation is not only about preventing loss. It is about making a memory available while the people in it can still enjoy and explain it.</p>
+    <p>Print the annual 100 as a simple book, or choose a smaller set for a box and one photograph for the wall. Handle important prints by the edges, keep them away from damp and direct sunlight, and use suitable albums or enclosures. The National Archives of Australia notes that photographic records need active care and that <a href="https://www.naa.gov.au/about-us/preserving-collection" target="_blank" rel="noopener noreferrer">digitisation can preserve images and improve access</a>.</p>
+    <p>Look for the people missing from your archive. In many families, one parent makes nearly every photograph and appears in very few. Ask another person to take the picture, use a timer or plan a periodic <a href="/family-photography">family photography session</a> where nobody has to remain behind the camera. The aim is not a year made entirely of professional portraits. It is a record in which every important person exists.</p>
+</section>
+
+<section id="thirty-minute-rescue">
+    <p class="archive-kicker">Start today</p>
+    <h2>The 30-minute family photo rescue</h2>
+    <div class="archive-checklist">
+        <label><input type="checkbox"> Write down every place that holds family photographs.</label>
+        <label><input type="checkbox"> Create one folder named with the current year and "Family 100".</label>
+        <label><input type="checkbox"> Add the first 12 photographs without trying to perfect the set.</label>
+        <label><input type="checkbox"> Copy that folder to one separate device or secure account.</label>
+        <label><input type="checkbox"> Add names, date and place to the three photographs that matter most.</label>
+        <label><input type="checkbox"> Choose one photograph to print this week.</label>
+    </div>
+    <p>Repeat the process for older years only after the current year works. A simple habit that continues is more protective than a complicated archive built once.</p>
+</section>
+
+<section id="final-rule">
+    <p class="archive-kicker">The final rule</p>
+    <h2>Leave decisions, not just files</h2>
+    <p>Your children do not need every accidental burst, receipt screenshot and near-identical pose. They need the photographs that show who was there, how people related to each other and what everyday life felt like.</p>
+    <p>Choose the story. Keep copies that cannot fail together. Add the names. Respect privacy. Put a few memories where the family can see them now.</p>
+    <p>If you need ideas for making stronger everyday pictures, read <a href="/how-to-capture-the-special-moments-of-the-child">how to capture special moments with your child</a>. To see how a complete family portrait can include the people normally behind the phone, browse the <a href="/gallery">Timeless Photography gallery</a>.</p>
+    <div class="archive-cta"><span>Brisbane families</span><h3>Make one photograph everyone is in</h3><p>Timeless creates relaxed family portraits designed to become part of the archive, not another forgotten camera-roll file.</p><a class="button" href="/contact">Plan a family session</a></div>
+</section>
+
+<section class="archive-sources" aria-labelledby="archive-sources-title">
+    <p class="archive-kicker">Official references</p>
+    <h2 id="archive-sources-title">Sources and further reading</h2>
+    <ul>
+        <li><a href="https://www.archives.gov/files/preservation/formats/pdf/preserving-your-digital-memories.pdf" target="_blank" rel="noopener noreferrer">Preserving Your Digital Memories - US National Archives</a></li>
+        <li><a href="https://blogs.loc.gov/thesignal/2013/07/what-people-are-asking-about-personal-digital-archiving-part-2/" target="_blank" rel="noopener noreferrer">Personal Digital Archiving Questions - Library of Congress</a></li>
+        <li><a href="https://www.esafety.gov.au/parents/issues-and-advice/privacy-child" target="_blank" rel="noopener noreferrer">Privacy and Your Child - eSafety Commissioner</a></li>
+        <li><a href="https://www.naa.gov.au/about-us/preserving-collection" target="_blank" rel="noopener noreferrer">Preserving the Collection - National Archives of Australia</a></li>
+    </ul>
+</section>`
+    }
+];
+
 const pageReferrals = {
     Home: {
         eyebrow: 'Local studio reference',
@@ -533,12 +673,15 @@ function pageTemplate(title, content, bodyClass = '', seo = pageSeo[title], post
     const socialImage = seo.image || DEFAULT_SOCIAL_IMAGE;
     const robots = seo.robots || 'index, follow, max-image-preview:large';
     const pageType = post ? 'article' : 'website';
+    const socialTitle = seo.ogTitle || seo.title;
+    const socialDescription = seo.ogDescription || seo.description;
+    const viewport = seo.accessibleViewport ? 'width=device-width, initial-scale=1' : 'width=device-width, initial-scale=1, maximum-scale=1';
     const semanticHeading = /<h1\b/i.test(content) ? '' : `<h1 class="visually-hidden">${escapeHtml(seo.heading || title)}</h1>`;
     return `<!DOCTYPE html>
 <html lang="en-AU">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="viewport" content="${viewport}">
     <title>${escapeHtml(seo.title)}</title>
     <meta name="description" content="${escapeHtml(seo.description)}">
     <meta name="robots" content="${robots}">
@@ -546,22 +689,18 @@ function pageTemplate(title, content, bodyClass = '', seo = pageSeo[title], post
     <meta property="og:locale" content="en_AU">
     <meta property="og:type" content="${pageType}">
     <meta property="og:site_name" content="${SITE_NAME}">
-    <meta property="og:title" content="${escapeHtml(seo.title)}">
-    <meta property="og:description" content="${escapeHtml(seo.description)}">
+    <meta property="og:title" content="${escapeHtml(socialTitle)}">
+    <meta property="og:description" content="${escapeHtml(socialDescription)}">
     <meta property="og:url" content="${url}">
     <meta property="og:image" content="${socialImage}">
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="${escapeHtml(seo.title)}">
-    <meta name="twitter:description" content="${escapeHtml(seo.description)}">
+    <meta name="twitter:title" content="${escapeHtml(socialTitle)}">
+    <meta name="twitter:description" content="${escapeHtml(socialDescription)}">
     <meta name="twitter:image" content="${socialImage}">
     <script type="application/ld+json">${schemaGraph(title, seo, post)}</script>
-    <link rel="icon" type="image/png" href="Assets/Logos/favicon.png">
-    <link rel="stylesheet" href="Assets/Photography/css/reset.css" type="text/css" media="all">
-    <link rel="stylesheet" href="Assets/Photography/css/wordpress.css" type="text/css" media="all">
-    <link rel="stylesheet" href="Assets/Photography/css/screen.css" type="text/css" media="all">
-    <link rel="stylesheet" href="Assets/Photography/css/grid.css" type="text/css" media="all">
-    <link rel="stylesheet" href="style.css?v=3.0" type="text/css" media="all">
-</head>
+${seo.preloadImage ? `    <link rel="preload" href="${seo.preloadImage}" as="image" type="image/webp">\n` : ''}    <link rel="icon" type="image/png" href="Assets/Logos/favicon.png">
+${seo.minimalCss ? '' : `    <link rel="stylesheet" href="Assets/Photography/css/reset.css" type="text/css" media="all">\n    <link rel="stylesheet" href="Assets/Photography/css/wordpress.css" type="text/css" media="all">\n    <link rel="stylesheet" href="Assets/Photography/css/screen.css" type="text/css" media="all">\n    <link rel="stylesheet" href="Assets/Photography/css/grid.css" type="text/css" media="all">\n`}    <link rel="stylesheet" href="style.css?v=3.0" type="text/css" media="all">
+${seo.stylesheet ? `    <link rel="stylesheet" href="${seo.stylesheet}" type="text/css" media="all">\n` : ''}</head>
 <body class="page-template-default page ${bodyClass}">
 ${headerHtml}
     <main id="wrapper">
@@ -600,15 +739,16 @@ function stripHtml(value) {
 function blogListing(posts) {
     const items = posts.map((post) => {
         const postPath = `/${post.post_name}`;
-        const excerpt = stripHtml(post.post_content).slice(0, 220);
+        const excerpt = stripHtml(post.post_excerpt || post.post_content).slice(0, 220);
         return `<article class="blog-list-item"><p class="blog-date">${post.post_date.slice(0, 10)}</p><h2><a href="${postPath}">${post.post_title}</a></h2><p>${excerpt}${excerpt.length === 220 ? '&hellip;' : ''}</p><a class="button ghost" href="${postPath}">Read More</a></article>`;
     }).join('\n');
     return `<section class="original-page-title"><h1>Blog</h1></section><div class="blog-list">${items}</div>`;
 }
 
 function postPage(post) {
-    const content = localizeContent(post.post_content, post.post_title);
-    return `<article class="original-post"><header><p class="blog-date">${post.post_date.slice(0, 10)}</p><h1>${post.post_title}</h1></header>${content}</article>`;
+    const content = post.editorial ? post.post_content : localizeContent(post.post_content, post.post_title);
+    const className = post.editorial ? 'original-post editorial-post archive-guide' : 'original-post';
+    return `<article class="${className}"><header><p class="blog-date">${post.post_date.slice(0, 10)}</p><h1>${post.post_title}</h1></header>${content}</article>`;
 }
 
 function postSeo(post) {
@@ -616,13 +756,25 @@ function postSeo(post) {
         'how-to-capture-the-special-moments-of-the-child': 'Capturing Special Moments With Your Child | Timeless',
         'how-to-select-the-best-newborn-photography-brisbane-professional': 'How to Choose a Newborn Photographer in Brisbane',
         'newborn-photography-brisbane-get-access-with-the-newborn-baby-memories': 'Newborn Photography Brisbane: Preserve Baby Memories',
-        'useful-tips-for-portrait-photography': 'Portrait Photography Tips | Timeless Brisbane'
+        'useful-tips-for-portrait-photography': 'Portrait Photography Tips | Timeless Brisbane',
+        'preserve-family-photos-phone-backup': 'How to Preserve Family Photos Before They Disappear | Timeless'
     };
     const excerpt = stripHtml(post.post_excerpt || post.post_content).slice(0, 155);
+    const editorialSeo = post.post_name === 'preserve-family-photos-phone-backup' ? {
+        description: 'Your phone may hold thousands of family photos, but that is not an archive. Use this practical plan to select, back up, label, share and print them.',
+        ogTitle: 'Your Phone Has 20,000 Photos. Your Children May Inherit None of Them.',
+        ogDescription: 'A practical family photo rescue plan: choose what matters, keep copies that cannot fail together, add the names and make memories visible.',
+        image: `${SITE_URL}/Assets/Images/Editorial/family-photo-archive-og.jpg`,
+        preloadImage: '/Assets/Images/Editorial/family-photo-archive-hero-960.webp',
+        accessibleViewport: true,
+        minimalCss: true,
+        stylesheet: '/family-photo-archive.css?v=1.0'
+    } : {};
     return {
         path: `/${post.post_name}`,
         title: seoTitles[post.post_name] || `${post.post_title} | Timeless`,
-        description: excerpt || `Photography advice from ${SITE_NAME}.`
+        description: excerpt || `Photography advice from ${SITE_NAME}.`,
+        ...editorialSeo
     };
 }
 
@@ -704,8 +856,10 @@ function build() {
     const sql = fs.readFileSync(SQL_FILE, 'utf8');
     const posts = parseInsert(sql, 'wpdt_posts');
     const pages = posts.filter((post) => post.post_type === 'page' && post.post_status === 'publish');
-    const blogPosts = posts
-        .filter((post) => post.post_type === 'post' && post.post_status === 'publish')
+    const blogPosts = [
+        ...posts.filter((post) => post.post_type === 'post' && post.post_status === 'publish'),
+        ...EDITORIAL_POSTS
+    ]
         .sort((a, b) => b.post_date.localeCompare(a.post_date));
 
     for (const page of pages) {

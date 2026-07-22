@@ -1,0 +1,349 @@
+.archive-guide {
+    max-width: 1100px;
+    color: #252525;
+}
+
+.archive-guide > header {
+    max-width: 940px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.archive-guide .blog-date,
+.single-post .copyright {
+    color: #555;
+}
+
+.archive-guide > header h1 {
+    margin-top: 14px;
+    font-size: clamp(42px, 6vw, 72px);
+    line-height: 1.02;
+    letter-spacing: 0;
+    text-transform: none;
+}
+
+.archive-guide h2,
+.archive-guide h3 {
+    letter-spacing: 0;
+    text-transform: none;
+}
+
+.archive-guide h2 {
+    margin-bottom: 20px;
+    font-size: 38px;
+    line-height: 1.18;
+}
+
+.archive-guide h3 {
+    font-size: 27px;
+    line-height: 1.25;
+}
+
+.archive-guide p,
+.archive-guide li {
+    font-size: 17px;
+    line-height: 1.75;
+}
+
+.archive-guide a:not(.button) {
+    border-bottom: 1px solid #777;
+    font-weight: 600;
+}
+
+.archive-hero {
+    position: relative;
+    margin: 0 0 64px;
+}
+
+.archive-hero img {
+    display: block;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 1.9 / 1;
+    object-fit: cover;
+}
+
+.archive-hero figcaption {
+    position: absolute;
+    right: 22px;
+    bottom: 20px;
+    left: 22px;
+    padding: 13px 16px;
+    color: #fff;
+    background: rgba(17, 17, 17, 0.88);
+    font-size: 12px;
+    line-height: 1.5;
+}
+
+.archive-intro,
+.archive-guide > section {
+    width: min(760px, 100%);
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.archive-guide > section {
+    margin-top: 76px;
+}
+
+.archive-lede {
+    margin-bottom: 24px;
+    color: #111;
+    font-family: var(--font-heading);
+    font-size: 25px !important;
+    line-height: 1.5 !important;
+}
+
+.archive-intro p + p,
+.archive-guide section p + p {
+    margin-top: 18px;
+}
+
+.archive-kicker {
+    margin-bottom: 10px;
+    color: #597167;
+    font-size: 11px !important;
+    font-weight: 700;
+    letter-spacing: 0;
+    text-transform: uppercase;
+}
+
+.archive-callout {
+    display: grid;
+    grid-template-columns: 150px 1fr;
+    gap: 22px;
+    margin-top: 32px;
+    padding: 24px 26px;
+    border-left: 4px solid #597167;
+    background: #edf2ef;
+}
+
+.archive-callout strong {
+    font-family: var(--font-heading);
+    font-size: 15px;
+}
+
+.archive-callout span {
+    font-size: 15px;
+    line-height: 1.65;
+}
+
+.archive-reality-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    margin-top: 30px;
+    border-top: 1px solid #bbb;
+    border-bottom: 1px solid #bbb;
+}
+
+.archive-reality-grid > div {
+    padding: 28px 28px 24px 0;
+}
+
+.archive-reality-grid > div + div {
+    padding-left: 28px;
+    border-left: 1px solid #bbb;
+}
+
+.archive-reality-grid span,
+.archive-cta > span {
+    display: block;
+    margin-bottom: 8px;
+    color: #597167;
+    font-size: 10px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.archive-reality-grid strong {
+    display: block;
+    margin-bottom: 10px;
+    font-family: var(--font-heading);
+    font-size: 19px;
+}
+
+.archive-reality-grid p,
+.archive-flow p {
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+.archive-list {
+    display: grid;
+    gap: 10px;
+    margin: 24px 0;
+    padding-left: 22px;
+}
+
+.archive-flow {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1px;
+    margin: 30px 0;
+    background: #bbb;
+    border: 1px solid #bbb;
+}
+
+.archive-flow > div {
+    min-width: 0;
+    padding: 24px 20px;
+    background: #fff;
+}
+
+.archive-flow span {
+    display: block;
+    margin-bottom: 20px;
+    color: #597167;
+    font-family: var(--font-heading);
+    font-size: 26px;
+}
+
+.archive-flow strong {
+    display: block;
+    margin-bottom: 8px;
+    font-family: var(--font-heading);
+    font-size: 16px;
+}
+
+.archive-quote {
+    margin: 30px 0 0;
+    padding: 26px 30px;
+    border-left: 4px solid #111;
+    color: #222;
+    background: #f4f4f4;
+    font-family: var(--font-heading);
+    font-size: 20px;
+    font-style: normal;
+    line-height: 1.6;
+}
+
+.archive-checklist {
+    display: grid;
+    gap: 0;
+    margin: 28px 0;
+    padding: 12px 28px;
+    color: #fff;
+    background: #171717;
+}
+
+.archive-checklist label {
+    display: grid;
+    grid-template-columns: 20px 1fr;
+    gap: 13px;
+    align-items: start;
+    padding: 16px 0;
+    border-bottom: 1px solid #444;
+    font-size: 15px;
+    line-height: 1.55;
+}
+
+.archive-checklist label:last-child {
+    border-bottom: 0;
+}
+
+.archive-checklist input {
+    width: 17px;
+    height: 17px;
+    margin-top: 3px;
+    accent-color: #82988f;
+}
+
+.archive-cta {
+    margin-top: 38px;
+    padding: 34px;
+    border-top: 3px solid #111;
+    background: #edf2ef;
+}
+
+.archive-cta p {
+    max-width: 600px;
+    margin-bottom: 22px;
+    font-size: 15px;
+}
+
+.archive-cta .button {
+    display: inline-block;
+}
+
+.archive-sources {
+    padding-top: 46px;
+    border-top: 1px solid #bbb;
+}
+
+.archive-sources ul {
+    display: grid;
+    gap: 10px;
+    padding-left: 20px;
+}
+
+.archive-sources li {
+    font-size: 14px;
+}
+
+@media (max-width: 768px) {
+    .archive-guide {
+        width: min(100% - 32px, 1100px);
+        padding-top: 54px;
+    }
+
+    .archive-guide > header h1 {
+        font-size: 40px;
+    }
+
+    .archive-guide h2 {
+        font-size: 30px;
+    }
+
+    .archive-guide p,
+    .archive-guide li {
+        font-size: 16px;
+    }
+
+    .archive-hero {
+        margin-bottom: 42px;
+    }
+
+    .archive-hero img {
+        aspect-ratio: 4 / 3;
+        object-position: 62% center;
+    }
+
+    .archive-hero figcaption {
+        right: 12px;
+        bottom: 12px;
+        left: 12px;
+    }
+
+    .archive-guide > section {
+        margin-top: 58px;
+    }
+
+    .archive-lede {
+        font-size: 21px !important;
+    }
+
+    .archive-callout,
+    .archive-reality-grid,
+    .archive-flow {
+        grid-template-columns: 1fr;
+    }
+
+    .archive-callout {
+        gap: 8px;
+    }
+
+    .archive-reality-grid > div,
+    .archive-reality-grid > div + div {
+        padding: 24px 0;
+        border-left: 0;
+    }
+
+    .archive-reality-grid > div + div {
+        border-top: 1px solid #bbb;
+    }
+
+    .archive-quote,
+    .archive-cta {
+        padding: 24px;
+    }
+}
