@@ -98,7 +98,8 @@ header.site-header {
     align-items: center;
     gap: 28px;
     min-height: 88px;
-    padding: 0 32px;
+    padding-right: max(32px, calc((100vw - 1120px) / 2));
+    padding-left: max(32px, calc((100vw - 1120px) / 2));
     border-bottom: 1px solid #e7e7e7;
     background-color: #ffffff;
     position: sticky;

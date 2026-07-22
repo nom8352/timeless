@@ -38,7 +38,7 @@ Last updated: 2026-07-23
 
 ## Shared header
 
-- The site-wide header uses a compact single row: logo on the left, desktop navigation on the right and Instagram at the far edge.
+- The site-wide header uses a compact single row within a centered 1120px content width: logo on the left, desktop navigation on the right and Instagram at the far edge.
 - Desktop header height is 88px with a 44px logo; mobile closes to 75px with a 40px logo and right-aligned menu button.
 - The desktop-only hamburger was removed, mobile navigation remains keyboard-accessible, and the Services submenu no longer shows legacy list markers.
 - `style.css?v=3.1` is generated across every HTML page to invalidate the previous cached header styles.

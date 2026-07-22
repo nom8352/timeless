@@ -763,7 +763,7 @@ function pageTemplate(title, content, bodyClass = '', seo = pageSeo[title], post
     <meta name="twitter:image" content="${socialImage}">
     <script type="application/ld+json">${schemaGraph(title, seo, post)}</script>
 ${seo.preloadImage ? `    <link rel="preload" href="${seo.preloadImage}" as="image" type="image/webp">\n` : ''}    <link rel="icon" type="image/png" href="Assets/Logos/favicon.png">
-${seo.minimalCss ? '' : `    <link rel="stylesheet" href="Assets/Photography/css/reset.css" type="text/css" media="all">\n    <link rel="stylesheet" href="Assets/Photography/css/wordpress.css" type="text/css" media="all">\n    <link rel="stylesheet" href="Assets/Photography/css/screen.css" type="text/css" media="all">\n    <link rel="stylesheet" href="Assets/Photography/css/grid.css" type="text/css" media="all">\n`}    <link rel="stylesheet" href="style.css?v=3.1" type="text/css" media="all">
+${seo.minimalCss ? '' : `    <link rel="stylesheet" href="Assets/Photography/css/reset.css" type="text/css" media="all">\n    <link rel="stylesheet" href="Assets/Photography/css/wordpress.css" type="text/css" media="all">\n    <link rel="stylesheet" href="Assets/Photography/css/screen.css" type="text/css" media="all">\n    <link rel="stylesheet" href="Assets/Photography/css/grid.css" type="text/css" media="all">\n`}    <link rel="stylesheet" href="style.css?v=3.2" type="text/css" media="all">
 ${(seo.stylesheets || (seo.stylesheet ? [seo.stylesheet] : [])).map((stylesheet) => `    <link rel="stylesheet" href="${stylesheet}" type="text/css" media="all">\n`).join('')}</head>
 <body class="page-template-default page ${bodyClass}">
 ${headerHtml}
