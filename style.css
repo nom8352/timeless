@@ -644,6 +644,70 @@ footer {
     max-width: 100%;
 }
 
+.editorial-link-section {
+    width: min(1120px, calc(100% - 40px));
+    margin: 0 auto;
+    padding: 56px 0;
+    border-top: 1px solid #e5e5e5;
+}
+
+.editorial-link-section h2 {
+    max-width: 760px;
+    margin: 8px 0 14px;
+    font-size: clamp(22px, 3vw, 34px);
+    line-height: 1.25;
+}
+
+.editorial-link-section > p:not(.editorial-eyebrow) {
+    max-width: 720px;
+    color: #666666;
+    font-size: 16px;
+}
+
+.editorial-eyebrow {
+    color: #777777;
+    font-family: var(--font-heading);
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+}
+
+.editorial-referral-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px 24px;
+    margin-top: 22px;
+}
+
+.editorial-referral-links a,
+.editorial-citation a {
+    border-bottom: 1px solid #888888;
+    font-weight: 600;
+}
+
+.editorial-citation {
+    margin-top: 18px !important;
+    padding: 16px 18px !important;
+    border-left: 3px solid #777777;
+    background: #f7f7f7;
+    color: #555555;
+    font-size: 14px;
+    line-height: 1.7;
+}
+
+.editorial-partner-link {
+    margin-top: 16px !important;
+    color: #555555;
+    font-size: 15px;
+    line-height: 1.7;
+}
+
+.editorial-partner-link a {
+    border-bottom: 1px solid #888888;
+    font-weight: 600;
+}
+
 .form-honeypot {
     position: absolute !important;
     left: -9999px !important;
@@ -741,6 +805,11 @@ footer {
     .blog-list {
         grid-template-columns: 1fr;
     }
+
+    .editorial-link-section {
+        padding: 42px 0;
+    }
+
 }
 /* Accessible headings preserve the original visual layout while giving each page a clear document title. */
 .visually-hidden {

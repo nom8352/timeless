@@ -10,6 +10,84 @@ const BUSINESS_EMAIL = 'timeless.info01@gmail.com';
 const BUSINESS_PHONE_DISPLAY = '0434 920 114';
 const BUSINESS_PHONE_SCHEMA = '+61434920114';
 const DEFAULT_SOCIAL_IMAGE = `${SITE_URL}/Assets/Photography/images/2019/08/Amelia_0006_Web.jpg`;
+const SWEETLIFE_URLS = {
+    newborn: 'https://sweetlifephotography.com.au/',
+    handFeet: 'https://sweetlifephotography.com.au/baby-hand-feet-sculptures-north-lakes/',
+    cakeSmash: 'https://sweetlifephotography.com.au/cake-smash-first-birthday-photography-brisbane/'
+};
+
+const pageReferrals = {
+    Home: {
+        eyebrow: 'Local studio reference',
+        heading: 'Explore another specialist Brisbane studio',
+        copy: 'Families comparing styles can also view Sweetlife Photography for dedicated newborn portrait sessions.',
+        links: [
+            { label: 'newborn photography brisbane', href: SWEETLIFE_URLS.newborn }
+        ]
+    },
+    'Newborn Photography Brisbane': {
+        eyebrow: 'Newborn studio reference',
+        heading: 'Comparing newborn portrait styles?',
+        copy: 'Explore Sweetlife Photography for another specialist newborn studio experience in Brisbane\'s northern suburbs.',
+        links: [
+            { label: 'newborn photoshoot brisbane', href: SWEETLIFE_URLS.newborn }
+        ]
+    }
+};
+
+const contextualCitationsByPage = {
+    'Newborn Photography Brisbane': [
+        {
+            after: 'In other words, we create an amazing and skillful portfolio.',
+            html: '<p class="editorial-citation"><strong>Session safety:</strong> Photo poses should never override established infant sleep guidance. Review <a href="https://www.pregnancybirthbaby.org.au/babies/sleep-and-settling/safe-sleep-for-babies" target="_blank" rel="noopener noreferrer">safe sleep guidance from Pregnancy, Birth and Baby</a> and the <a href="https://rednose.org.au/safe-sleep-and-safer-pregnancy/overview/" target="_blank" rel="noopener noreferrer">Red Nose Safe Sleep hub</a> when planning a newborn session.</p>'
+        },
+        {
+            after: 'So the photographers who have the patience at the time of the shoot are real photographers.',
+            html: '<p class="editorial-citation"><strong>Props and privacy:</strong> Any sleep product or prop should align with <a href="https://www.productsafety.gov.au/consumers/keep-baby-safe/settle-baby-to-sleep-safely/products-that-are-safe-for-baby-to-sleep-in-guide" target="_blank" rel="noopener noreferrer">ACCC guidance on products that are safe for baby to sleep in</a>. Before sharing a child\'s images online, families can also review the <a href="https://www.esafety.gov.au/parents/issues-and-advice/privacy-child" target="_blank" rel="noopener noreferrer">eSafety Commissioner\'s child privacy guidance</a>.</p>'
+        }
+    ],
+    'Baby Photography Brisbane': [
+        {
+            after: 'You should talk to your photographer and fix another best day for the photo shoot and enjoy the new member that has come to your family.',
+            html: '<p class="editorial-citation"><strong>Planning around your baby:</strong> Feeding, sleeping and health needs can change quickly after birth. Pregnancy, Birth and Baby explains <a href="https://www.pregnancybirthbaby.org.au/labour-and-birth/after-birth/your-baby-in-the-first-few-days" target="_blank" rel="noopener noreferrer">what families can expect in a baby\'s first few days</a>.</p>'
+        },
+        {
+            after: 'Normally the photographers prefer to set up the room with the most natural light.',
+            html: '<p class="editorial-citation"><strong>Comfort and light:</strong> Choose layers that keep your baby comfortable, using the <a href="https://www.pregnancybirthbaby.org.au/babies/daily-care/dressing-a-newborn" target="_blank" rel="noopener noreferrer">Pregnancy, Birth and Baby guide to dressing a newborn</a>. For outdoor sessions or direct sunlight, follow <a href="https://www.cancer.org.au/about-us/policy-and-advocacy/prevention/uv-radiation/related-resources/sun-protection-babies" target="_blank" rel="noopener noreferrer">Cancer Council Australia\'s sun protection advice for babies</a>.</p>'
+        }
+    ],
+    'Family Photography Brisbane': [
+        {
+            after: 'And also they will definitely cooperate for the picture and that will make the great family portrait.',
+            html: '<p class="editorial-citation"><strong>Sharing family images:</strong> Before posting identifiable photos of children, review the <a href="https://www.esafety.gov.au/key-topics/online-tools-and-features/photo-and-video-sharing" target="_blank" rel="noopener noreferrer">eSafety Commissioner\'s photo and video sharing guidance</a> and agree on family privacy preferences.</p>'
+        },
+        {
+            after: 'So hire the best and professional photographer and also if you shoot then remember this point for the great pictures or else hire us as we have the best and professional photographer.',
+            html: '<p class="editorial-citation"><strong>Image rights:</strong> Photography usage depends on the agreement between the photographer and client. The <a href="https://www.copyright.com.au/about-copyright/ownership/" target="_blank" rel="noopener noreferrer">Copyright Agency explains copyright ownership in Australia</a>.</p>'
+        }
+    ],
+    'Photography Brisbane': [
+        {
+            after: 'This is the way that you can have photography from expert photographers.',
+            html: '<p class="editorial-citation"><strong>Professional practice:</strong> Families researching photographers can also consult the <a href="https://www.a-p-s.org.au/" target="_blank" rel="noopener noreferrer">Australian Photographic Society\'s photography resources</a> for broader Australian industry information.</p>'
+        }
+    ]
+};
+
+const contextualReferralsByPage = {
+    'Hand and Feet Sculptures': [
+        {
+            after: 'It is important when undergoing this opportunity; you take time in recognizing exactly how this process is implemented and what is all needed of you and child.',
+            html: `<p class="editorial-partner-link">Families comparing framed keepsake options can also view Sweetlife Photography's <a href="${SWEETLIFE_URLS.handFeet}">baby hand and feet sculptures in North Lakes</a>.</p>`
+        }
+    ],
+    'Kids,Cake Smash Photography Brisbane': [
+        {
+            after: 'In addition to this, the session is greeted when the kid is happily playing with the cake.',
+            html: `<p class="editorial-partner-link">For another local studio option focused on first birthdays, see Sweetlife Photography's <a href="${SWEETLIFE_URLS.cakeSmash}">cake smash and first birthday photography in Brisbane</a>.</p>`
+        }
+    ]
+};
 
 const pageSeo = {
     'Home': {
@@ -255,6 +333,8 @@ function localizeContent(source, title) {
         );
     }
 
+    content = content.replace(/https?:\/\/themes\.themegoods2\.com\/newton\/contact-1\/?/gi, '/contact');
+
     // WordPress injected these scripts during page rendering. The static fallback
     // below displays the same slide content without requiring the old plugin runtime.
     content = content.replace(/<script\b[^>]*>[\s\S]*?<\/script>/gi, '');
@@ -293,6 +373,38 @@ function localizeContent(source, title) {
         .map((line) => line.replaceAll('\t', '    ').trimEnd())
         .join('\n')
         .trim();
+}
+
+function injectAfterParagraphs(content, title, items, blockType) {
+    for (const item of items) {
+        const markerIndex = content.indexOf(item.after);
+        if (markerIndex === -1) throw new Error(`Could not place ${blockType} on ${title}: ${item.after}`);
+        const paragraphEnd = content.indexOf('</p>', markerIndex);
+        if (paragraphEnd === -1) throw new Error(`Could not find ${blockType} paragraph end on ${title}: ${item.after}`);
+        const insertionPoint = paragraphEnd + 4;
+        content = `${content.slice(0, insertionPoint)}\n${item.html}${content.slice(insertionPoint)}`;
+    }
+    return content;
+}
+
+function injectContextualCitations(content, title) {
+    return injectAfterParagraphs(content, title, contextualCitationsByPage[title] || [], 'contextual citation');
+}
+
+function injectContextualReferrals(content, title) {
+    return injectAfterParagraphs(content, title, contextualReferralsByPage[title] || [], 'contextual referral');
+}
+
+function appendEditorialSections(content, title) {
+    const referral = pageReferrals[title];
+    const referralHtml = referral ? `
+<section class="editorial-link-section editorial-referral" aria-labelledby="editorial-referral-${title.replace(/[^a-z0-9]+/gi, '-').toLowerCase()}">
+    <p class="editorial-eyebrow">${referral.eyebrow}</p>
+    <h2 id="editorial-referral-${title.replace(/[^a-z0-9]+/gi, '-').toLowerCase()}">${referral.heading}</h2>
+    <p>${referral.copy}</p>
+    <div class="editorial-referral-links">${referral.links.map((link) => `<a href="${link.href}">${link.label}</a>`).join('')}</div>
+</section>` : '';
+    return `${content}${referralHtml}`;
 }
 
 const headerHtml = `
@@ -610,6 +722,10 @@ function build() {
         } else {
             content = localizeContent(page.post_content, page.post_title);
         }
+
+        content = injectContextualCitations(content, page.post_title);
+        content = injectContextualReferrals(content, page.post_title);
+        content = appendEditorialSections(content, page.post_title);
 
         const bodyClass = `page-${page.post_name}`;
         fs.writeFileSync(path.join(ROOT, filename), pageTemplate(page.post_title, content, bodyClass, pageSeo[page.post_title]), 'utf8');
